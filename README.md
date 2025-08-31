@@ -78,7 +78,7 @@ tameemahmedsdet-portfolio/
 1. Clone the repository:
 ```bash
 git clone [repository-url]
-cd tameemahmedsdet-portfolio
+cd tameemmulla-portfolio
 ```
 
 2. Install dependencies:

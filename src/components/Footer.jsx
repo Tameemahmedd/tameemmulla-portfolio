@@ -9,8 +9,7 @@ const Footer = () => (
       <a href="https://github.com/Tameemahmedd" target="_blank" rel="noopener noreferrer">GitHub</a>
     </div>
     <p className="credit">
-      Designed and developed with ❤️ by <strong>Mohammed Tameem Ahmed Mulla</strong>. 
-      Powered by React.
+      Designed and developed with ❤️ by <strong>Mohammed Tameem Ahmed Mulla</strong>.
     </p>
   </footer>
 );

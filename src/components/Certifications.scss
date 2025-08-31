@@ -8,19 +8,21 @@
   }
 }
 
-// New wrapper to position scroll buttons relative to the grid
+// --- THIS IS THE KEY LAYOUT CHANGE ---
 .cert-scroll-wrapper {
-  position: relative;
-  padding: 0 2.5rem; // Add padding to make space for the buttons
+  // Use Flexbox to position the arrows and the grid
+  display: flex;
+  align-items: center;
+  gap: 1rem; // Add a gap between arrows and the grid
 }
 
 .cert-grid {
   display: flex;
   overflow-x: auto;
   gap: 1.5rem;
-  padding: 1rem 0 2rem 0;
-  // This enables smooth scrolling on touch devices
-  scroll-snap-type: x mandatory;
+  padding: 1rem 0.5rem 2rem 0.5rem;
+  flex-grow: 1; // Allows the grid to take up the available space
+  
   &::-webkit-scrollbar { display: none; }
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -37,20 +39,15 @@
   border: 1px solid $secondary-color;
   position: relative;
   transition: transform 0.3s, box-shadow 0.3s;
-  // This helps with the scroll snapping
-  scroll-snap-align: start;
-
   &:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
   }
-
   h4 {
     color: $primary-color;
     margin-bottom: 0.75rem;
-    padding-right: 60px; // Add padding to prevent text from overlapping the button
+    padding-right: 60px;
   }
-
   p {
     color: $light-text;
     font-size: 0.9rem;
@@ -58,7 +55,6 @@
   }
 }
 
-// Replaced .arrow-icon with .open-button
 .open-button {
   position: absolute;
   top: 1.5rem;
@@ -70,18 +66,16 @@
   font-size: 0.8rem;
   font-weight: bold;
   transition: background-color 0.3s;
-
   .cert-card:hover & {
     background-color: $primary-color;
     color: $bg-color;
   }
 }
 
-// New styles for the scroll buttons
+// --- UPDATED ARROW STYLES ---
 .scroll-button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  // No longer needs absolute positioning
+  flex-shrink: 0; // Prevent buttons from shrinking
   background-color: $card-bg;
   border: 1px solid $secondary-color;
   color: $text-color;
@@ -94,19 +88,23 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: background-color 0.3s, border-color 0.3s;
-
+  transition: background-color 0.3s, border-color 0.3s, opacity 0.3s;
+  
   &:hover {
     background-color: $primary-color;
     border-color: $primary-color;
     color: $bg-color;
   }
-
-  &.left {
-    left: -20px;
+  
+  &:disabled {
+    opacity: 0.2;
+    cursor: not-allowed;
+    &:hover {
+      background-color: $card-bg;
+      border-color: $secondary-color;
+      color: $text-color;
+    }
   }
-
-  &.right {
-    right: -20px;
-  }
+  
+  // No longer need .left and .right classes for positioning
 }

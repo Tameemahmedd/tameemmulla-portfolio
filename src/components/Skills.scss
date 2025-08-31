@@ -1,18 +1,41 @@
-.skills-section {
-    overflow: hidden; padding: 3rem 0; margin: 3rem 0; background-color: $card-bg;
+// The @keyframes ticker is removed as all motion is now handled by JavaScript.
+
+#skills {
+  h2 {
+    margin-bottom: 2rem;
   }
-  .skills-ticker {
-    width: 100%; white-space: nowrap;
-    .ticker-content {
-      display: inline-block;
-      animation: ticker 60s linear infinite;
-      span {
-        display: inline-block; padding: 0.5rem 1rem; background: $secondary-color;
-        margin: 0 0.5rem; border-radius: 5px; color: $primary-color;
-      }
-    }
+}
+
+.skills-scroller {
+  // This is our main scrollable container
+  overflow-x: auto;
+  background-color: $card-bg;
+  border-radius: 8px;
+  padding: 1.5rem 0;
+  
+  // The gradient fade effect for the ends
+  -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 90%, transparent);
+  mask-image: linear-gradient(to right, transparent, black 5%, black 90%, transparent);
+
+  // Hide the actual scrollbar
+  &::-webkit-scrollbar { display: none; }
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.skills-list {
+  // A simple flex container for the skill tags
+  display: flex;
+  gap: 1rem;
+  padding: 0 1rem;
+
+  span {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: $secondary-color;
+    border-radius: 5px;
+    color: $primary-color;
+    white-space: nowrap;
+    user-select: none;
   }
-  @keyframes ticker {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
-  }
+}
