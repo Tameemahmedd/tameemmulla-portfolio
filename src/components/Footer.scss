@@ -1,0 +1,6 @@
+#contact {
+    text-align: center; padding: 3rem 1rem; margin-top: 4rem; border-top: 1px solid $secondary-color;
+    .contact-prompt { font-size: 1.2rem; margin-bottom: 1rem; }
+    .contact-links a { color: $primary-color; margin: 0 1rem; text-decoration: none; &:hover { text-decoration: underline; } }
+    .credit { margin-top: 2rem; font-size: 0.9rem; color: $light-text; }
+  }

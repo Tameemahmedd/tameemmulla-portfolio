@@ -1,0 +1,103 @@
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 1rem;
+
+  // New grid background style to match the reference image
+  background-color: $bg-color;
+  background-image: 
+    linear-gradient(rgba(45, 45, 45, 0.75) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(45, 45, 45, 0.75) 1px, transparent 1px);
+  background-size: 30px 30px;
+
+  .hero-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .greeting {
+    font-size: 2.5rem;
+    color: $primary-color;
+    margin-bottom: 2rem;
+    // Remove the glow to match the clean look of the reference
+    text-shadow: none; 
+  }
+
+  .code-block {
+    background-color: #1E1E1E; // A darker, more authentic editor color
+    border: 1px solid $secondary-color;
+    border-radius: 8px;
+    padding: 1.5rem 2rem;
+    max-width: 800px;
+    width: 100%;
+    margin-bottom: 2rem;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); // Add a subtle shadow
+
+    .dots {
+      position: absolute;
+      top: 10px;
+      left: 15px;
+    }
+    .dot {
+      height: 12px;
+      width: 12px;
+      border-radius: 50%;
+      display: inline-block;
+      margin-right: 5px;
+    }
+    .red { background-color: #ff5f56; }
+    .yellow { background-color: #ffbd2e; }
+    .green { background-color: #27c93f; }
+    
+    pre {
+      margin-top: 15px;
+      white-space: pre-wrap;
+      font-size: 0.95rem; // Slightly larger font for readability
+      line-height: 1.6;
+
+      // Update syntax highlighting colors to match the reference
+      .punc {
+        color: $light-text;
+      }
+      .key {
+        color: $text-color; // Keys are now the standard text color
+      }
+      .string {
+        color: $primary-color; // Strings are now the main accent orange color
+      }
+    }
+  }
+
+  .resume-buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .resume-button {
+    display: inline-block;
+    background-color: $primary-color;
+    color: $bg-color;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid $primary-color;
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 15px rgba($primary-color, 0.4);
+    }
+
+    &.sdet {
+      background-color: transparent;
+      color: $primary-color;
+    }
+  }
+}

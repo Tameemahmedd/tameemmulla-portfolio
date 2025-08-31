@@ -1,0 +1,19 @@
+.site-header {
+    background-color: rgba($bg-color, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 1rem 5%;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    border-bottom: 1px solid $secondary-color;
+  }
+  .site-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .logo { font-size: 1.5rem; font-weight: bold; color: $primary-color; }
+    ul { list-style: none; display: flex; }
+    li { margin-left: 2rem; }
+    a { color: $text-color; text-decoration: none; transition: color 0.3s; &:hover { color: $primary-color; } }
+  }
+  @media (max-width: 768px) { .site-nav ul { display: none; } }

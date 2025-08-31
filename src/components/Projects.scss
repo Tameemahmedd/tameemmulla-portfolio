@@ -1,0 +1,44 @@
+.project-grid {
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem; 
+  margin-top: 2rem;
+}
+
+.project-card {
+  background: $card-bg; 
+  padding: 1.5rem; 
+  border-radius: 8px; 
+  text-decoration: none;
+  color: $text-color; 
+  border: 1px solid $secondary-color; 
+  transition: transform 0.3s, border-color 0.3s;
+  text-align: left;
+  &:hover { 
+    transform: translateY(-5px); 
+    border-color: $primary-color; 
+  }
+  h4 { 
+    color: $primary-color; 
+    margin-bottom: 0.5rem; 
+  }
+}
+
+// New styles for the expand button
+.expand-button {
+  margin-top: 2.5rem;
+  background-color: transparent;
+  color: $primary-color;
+  border: 1px solid $primary-color;
+  padding: 0.7rem 1.5rem;
+  font-family: $primary-font;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+
+  &:hover {
+    background-color: $primary-color;
+    color: $bg-color;
+  }
+}
