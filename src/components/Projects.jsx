@@ -1,6 +1,9 @@
 import React, { useState } from 'react'; // <-- Import useState
 
 const projectData = [
+  { title: "Regression Failure Report Bot (BrowserStack)", desc: "Nightly job that pulls Jenkins regression results, groups new failures by stack trace and posts a triage report to Slack.", link: "https://github.com/Tameemahmedd" },
+  { title: "AI PR-Quality Review (BrowserStack)", desc: "Claude Code skill that reviews test-automation PRs for 10 common anti-patterns before human review.", link: "https://github.com/Tameemahmedd" },
+  { title: "AI Test-Case Classifier (BrowserStack)", desc: "Claude Code + MCP workflow that audits gap sheets against the codebase and bulk-updates 150+ test cases in BrowserStack Test Management.", link: "https://github.com/Tameemahmedd" },
   { title: "Alerting Tool (Cisco AppDynamics)", desc: "Automated generation, monitoring, and reporting of AppDynamics health rules across performance testing stages.", link: "https://github.com/Tameemahmedd" },
   { title: "Rezum", desc: "Resume builder website with customizable templates using Spring Boot, Spring Security, and Thymeleaf.", link: "https://github.com/Tameemahmedd/Rezum" },
   { title: "Tech Bay", desc: "Spring Boot e-commerce app with complete store functionalities (like Amazon).", link: "https://github.com/Tameemahmedd/Tech-Bay" },

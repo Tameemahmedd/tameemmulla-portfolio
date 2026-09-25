@@ -27,13 +27,13 @@ const Hero = () => (
           {'    '}
           <span className="key">"title"</span>
           <span className="punc">: </span>
-          <span className="string">"Software Engineer"</span>
+          <span className="string">"SDET @ BrowserStack"</span>
           <span className="punc">,</span>
           <br />
           {'    '}
           <span className="key">"focus"</span>
           <span className="punc">: </span>
-          <span className="string">"Quality Engineering, Devops & Automation, Backend Development"</span>
+          <span className="string">"Test Automation (Playwright, Nightwatch.js), Quality Engineering, CI/CD"</span>
           <br />
           {'  '}
           <span className="punc">{'}'}</span>

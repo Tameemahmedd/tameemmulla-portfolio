@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tameem at BrowserStack</title>
+<meta name="description" content="SDET work at BrowserStack, Nov 2025 – present: test automation for checkout, pricing and lead flows, Playwright migration, regression and release ownership.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#F4F6F5; --surface:#FFFFFF; --ink:#15211D; --muted:#5A6B65; --line:#DCE3E0;
+  --accent:#0E7C5A; --accent-soft:#E2F2EB; --warn:#A35A00; --warn-soft:#FBEEDC; --crit:#B3261E; --crit-soft:#FBE4E2;
+  --display:"Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --body:"IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, Menlo, monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#0F1614; --surface:#16201D; --ink:#E4ECE9; --muted:#93A69F; --line:#26332F;
+    --accent:#4CC79A; --accent-soft:#173329; --warn:#E6A553; --warn-soft:#33261A; --crit:#F08A83; --crit-soft:#3A1E1C;
+    color-scheme:dark;
+  }
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.55}
+.wrap{max-width:1040px;margin:0 auto;padding-inline:20px;padding-block:32px 64px;display:flex;flex-direction:column;gap:48px}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0}
+h1{font-size:clamp(30px,5vw,46px);line-height:1.08;font-weight:700;letter-spacing:-.01em}
+h2{font-size:22px;font-weight:700}
+h3{font-size:16px;font-weight:600;font-family:var(--body)}
+p{margin:0}
+a{color:var(--accent)}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:3px}
+nav{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:14px}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+header{display:flex;flex-direction:column;gap:14px}
+.gherkin{font-family:var(--mono);font-size:13px;color:var(--muted);display:flex;flex-direction:column;gap:2px}
+.gherkin b{color:var(--accent);font-weight:500}
+.lede{max-width:64ch;color:var(--muted);font-size:16px}
+section{display:flex;flex-direction:column;gap:18px}
+.sec-head{display:flex;flex-direction:column;gap:4px}
+.sec-head p{color:var(--muted);max-width:68ch}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.stat{background:var(--surface);padding:18px 18px 16px;display:flex;flex-direction:column;gap:4px}
+.stat .n{font-family:var(--display);font-size:32px;font-weight:700;font-variant-numeric:tabular-nums;line-height:1}
+.stat .l{font-size:13px;color:var(--muted)}
+@media (max-width:760px){.stats{grid-template-columns:repeat(2,1fr)}}
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:560px;font-size:14px}
+th,td{text-align:left;padding:10px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:500}
+tr:last-child td{border-bottom:none}
+.pill{display:inline-block;font-family:var(--mono);font-size:11px;padding:2px 8px;border-radius:99px;white-space:nowrap}
+.pass{background:var(--accent-soft);color:var(--accent)}
+.p0{background:var(--crit-soft);color:var(--crit)}
+.p1{background:var(--warn-soft);color:var(--warn)}
+.p2{background:var(--line);color:var(--muted)}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+@media (max-width:760px){.cols{grid-template-columns:1fr}}
+ul.list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
+ul.list li{display:grid;grid-template-columns:auto 1fr;gap:10px;padding:10px 0;border-bottom:1px solid var(--line);align-items:baseline}
+ul.list li:last-child{border-bottom:none}
+.key{font-family:var(--mono);font-size:12px;color:var(--muted);white-space:nowrap}
+.quotes{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+@media (max-width:760px){.quotes{grid-template-columns:1fr}}
+blockquote{margin:0;padding:18px;background:var(--surface);border:1px solid var(--line);border-radius:10px;display:flex;flex-direction:column;gap:10px}
+blockquote p{font-size:14.5px}
+blockquote cite{font-style:normal;font-size:13px;color:var(--muted)}
+cite .award{font-family:var(--mono);font-size:11px;color:var(--accent)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font-size:13px;padding:5px 11px;border:1px solid var(--line);border-radius:99px;background:var(--surface)}
+.note{font-size:13px;color:var(--muted);border-left:3px solid var(--warn);padding:10px 14px;background:var(--surface);border-radius:0 8px 8px 0}
+footer{font-size:12px;color:var(--muted);font-family:var(--mono)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav><a href="/">← Portfolio</a><a href="/cisco.html">Previous role: Cisco →</a></nav>
+
+  <header>
+    <span class="eyebrow">SDET · Online Sales / Growth QA · BrowserStack · Remote · Nov 2025 – present</span>
+    <h1>Mohammed Tameem Ahmed Mulla at BrowserStack</h1>
+    <div class="gherkin" aria-hidden="true">
+      <span><b>Given</b> revenue-critical flows with coverage gaps</span>
+      <span><b>When</b> they are automated, migrated and stabilised</span>
+      <span><b>Then</b> leads, checkouts and emails stop breaking silently</span>
+    </div>
+    <p class="lede">I test the flows that bring in revenue: checkout, pricing, contact-sales and lead capture, and lifecycle emails. In about 10 months I closed coverage gaps across 11 modules, moved tests to Playwright, cleaned up regression and owned production deploys.</p>
+  </header>
+
+  <section aria-labelledby="s-overview">
+    <div class="sec-head"><h2 id="s-overview">Overview</h2></div>
+    <div class="stats">
+      <div class="stat"><span class="n">~970</span><span class="l">test cases written (~505 Playwright, ~470 Nightwatch)</span></div>
+      <div class="stat"><span class="n">189</span><span class="l">tickets owned, 160 shipped</span></div>
+      <div class="stat"><span class="n">7 · 11</span><span class="l">P0 · P1 features owned as QA</span></div>
+      <div class="stat"><span class="n">70+</span><span class="l">bugs raised, 3 of them P0</span></div>
+      <div class="stat"><span class="n">~160</span><span class="l">test cases migrated to Playwright</span></div>
+      <div class="stat"><span class="n">329</span><span class="l">PRs with my code, 153 reviewed</span></div>
+      <div class="stat"><span class="n">17</span><span class="l">production deploys owned</span></div>
+      <div class="stat"><span class="n">11</span><span class="l">peer recognition awards</span></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="s-coverage">
+    <div class="sec-head">
+      <h2 id="s-coverage">Coverage gaps closed</h2>
+      <p>Each module automated end to end in Playwright with Cucumber BDD.</p>
+    </div>
+    <div class="tbl">
+      <table>
+        <thead><tr><th>Module</th><th>What is covered</th><th>Result</th></tr></thead>
+        <tbody>
+          <tr><td>Contact Sales / Book a Demo</td><td>Form submit → CRM lead → meeting booking, on every product site</td><td><span class="pill pass">22 gap cases</span></td></tr>
+          <tr><td>Checkout</td><td>Payment-error redirects, experiment variants, legacy and new checkout</td><td><span class="pill pass">20 scenarios</span></td></tr>
+          <tr><td>Pricing page</td><td>Seat toggle, plan prices, page speed (web vitals)</td><td><span class="pill pass">26 scenarios</span></td></tr>
+          <tr><td>Webinars</td><td>Registration → lead, webinar slots in emails</td><td><span class="pill pass">90% → 100%</span></td></tr>
+          <tr><td>Hello Bar</td><td>Signed-in and signed-out states, dismiss, experiment serving</td><td><span class="pill pass">33% → 100%</span></td></tr>
+          <tr><td>Free product access</td><td>Self-serve workflow, feedback modal, trial cancel</td><td><span class="pill pass">27 scenarios</span></td></tr>
+          <tr><td>Abandoned leads</td><td>Signup started but not finished → lead captured</td><td><span class="pill pass">7 scenarios</span></td></tr>
+          <tr><td>Product-site touchpoints</td><td>Intro screens and CTAs for App Live, Website Scanner, App Accessibility</td><td><span class="pill pass">124 / 150</span></td></tr>
+          <tr><td>Dashboard lead CTAs</td><td>One-click vs modal lead creation, lead events</td><td><span class="pill pass">11 / 12</span></td></tr>
+          <tr><td>Lifecycle emails</td><td>Welcome, drip, referral and free-trial emails</td><td><span class="pill pass">48 / 52</span></td></tr>
+          <tr><td>Intro screens</td><td>App Live and Website Scanner intro, migrated to Playwright</td><td><span class="pill pass">69 scenarios</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section aria-labelledby="s-features">
+    <div class="sec-head">
+      <h2 id="s-features">Features I owned as QA</h2>
+      <p>By priority.</p>
+    </div>
+    <div class="tbl">
+      <table>
+        <thead><tr><th>Priority</th><th>Feature</th></tr></thead>
+        <tbody>
+          <tr><td><span class="pill p0">P0</span></td><td>Contact-sales form automation on every product site after a lost-lead incident</td></tr>
+          <tr><td><span class="pill p0">P0</span></td><td>Lead-drop assessment and quick fixes</td></tr>
+          <tr><td><span class="pill p0">P0</span></td><td>Paywall rules for teams on unlimited plans, and downgrade timing after failed payments</td></tr>
+          <tr><td><span class="pill p0">P0</span></td><td>Pricing experiment allocation for enterprise and expired users</td></tr>
+          <tr><td><span class="pill p1">P1</span></td><td>Lead CTA click behaviour on product dashboards</td></tr>
+          <tr><td><span class="pill p1">P1</span></td><td>Chat widget asks public-email users for a work email</td></tr>
+          <tr><td><span class="pill p1">P1</span></td><td>Checkout purchase button with saved cards</td></tr>
+          <tr><td><span class="pill p1">P1</span></td><td>Test Management pricing page updates</td></tr>
+          <tr><td><span class="pill p1">P1</span></td><td>Test Management automation coverage and product intro screens</td></tr>
+          <tr><td><span class="pill p2">P2</span></td><td>Pricing page simplification and A/B/C experiment, checkout redesign, cancellation flow, retention offers, webinars, Hello Bar (~150 more)</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section aria-labelledby="s-eng">
+    <div class="sec-head"><h2 id="s-eng">Engineering work</h2></div>
+    <div class="cols">
+      <div>
+        <h3>Migration and regression</h3>
+        <ul class="list">
+          <li><span class="key">PW</span><span>Migrated checkout, redirection, plan-switch and intro-screen suites from Nightwatch to Playwright, with 26 page objects and CI jobs.</span></li>
+          <li><span class="key">REG</span><span>Merged 52 feature files into 17 with all 7,976 scenarios kept; replaced 799 fixed waits with polling and cookie sign-in.</span></li>
+          <li><span class="key">FIX</span><span>Fixed 64 failing scenarios from one regression run and stabilised flaky signup tests.</span></li>
+          <li><span class="key">RAILS</span><span>Wrote a production-guarded Rails endpoint that fires Sidekiq/cron-only emails, making ~14 of them testable.</span></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Bugs caught before customers</h3>
+        <ul class="list">
+          <li><span class="key">LEADS</span><span>A sales form that froze on server errors and lost the lead.</span></li>
+          <li><span class="key">LEADS</span><span>Test traffic reaching the production lead pipeline.</span></li>
+          <li><span class="key">BILLING</span><span>Checkout provisioning the wrong plan tier; paywall downgrade firing too late.</span></li>
+          <li><span class="key">EMAIL</span><span>A dashboard change that stopped free-trial emails; traced to the causing change.</span></li>
+          <li><span class="key">DEPLOY</span><span>Reverted a change that broke a production build and called a rollback on a pricing-page issue.</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="s-ai">
+    <div class="sec-head">
+      <h2 id="s-ai">How I use AI</h2>
+      <p>Claude Code is part of my daily workflow for writing, reviewing and triaging tests.</p>
+    </div>
+    <ul class="list">
+      <li><span class="key">REVIEW</span><span>Built a Claude Code skill that reviews test PRs for 10 common mistakes before a human looks.</span></li>
+      <li><span class="key">TRIAGE</span><span>Nightly regression report: CI results → failures grouped by stack trace → Slack.</span></li>
+      <li><span class="key">MCP</span><span>Connected Claude to the issue tracker, Slack, GitHub and test management to run gap analysis and update 150+ test cases in bulk.</span></li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="s-voice">
+    <div class="sec-head">
+      <h2 id="s-voice">What teammates said</h2>
+      <p>11 peer awards: Extra Miler ×4, Round of Applause ×3, Unsung Warriors ×2, Speed Matters, Be with the Best.</p>
+    </div>
+    <div class="quotes">
+      <blockquote><p>"Great work in identifying the gaps within our automation coverage. This is a strong start toward building a clear path to reducing defect leakages and preventing production incidents."</p><cite>Arpit Patel, Manager - Engineering · <span class="award">Round of Applause</span></cite></blockquote>
+      <blockquote><p>"When runs surfaced flakiness or env-specific failures, he triaged alongside me, isolated root causes, and helped stabilizing the suites so we could trust the signal."</p><cite>Abhimanyu Vashisht, Software Engineer · <span class="award">Extra Miler</span></cite></blockquote>
+      <blockquote><p>"Whenever automation validation stopped us, you found time. Not eventually, but when it actually mattered."</p><cite>Pankaj Vadnal, Software Engineer · <span class="award">Extra Miler</span></cite></blockquote>
+      <blockquote><p>"Fantastic teamwork... on successfully delivering the Hello Bar implementation for the signed-out state! Your technical precision ensured a flawless rollout."</p><cite>Pragya Shukla · <span class="award">Unsung Warriors</span></cite></blockquote>
+    </div>
+  </section>
+
+  <section aria-labelledby="s-stack">
+    <div class="sec-head"><h2 id="s-stack">Tools and stack</h2></div>
+    <div class="chips">
+      <span class="chip">Playwright</span><span class="chip">Nightwatch.js</span><span class="chip">Cucumber BDD</span><span class="chip">JavaScript / TypeScript</span><span class="chip">Ruby on Rails</span><span class="chip">MySQL</span><span class="chip">Percy</span><span class="chip">Jenkins</span><span class="chip">Kubernetes</span><span class="chip">Claude Code</span><span class="chip">MCP</span><span class="chip">Jira</span>
+    </div>
+  </section>
+
+  <p class="note">Test-case counts are estimates from git history (scenarios plus data-driven examples). The PR count leaves out release PRs that only merged other people's branches.</p>
+
+  <footer>Updated September 2026</footer>
+</div>
+</body>
+</html>

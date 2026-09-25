@@ -6,6 +6,7 @@
     .timeline-content {
       h3 { margin-bottom: 0.5rem; }
       p { color: $light-text; }
+      .case-link { color: $primary-color; font-weight: bold; text-decoration: none; &:hover { text-decoration: underline; } }
       ul { list-style-type: '→ '; padding-left: 1.2rem; margin-top: 0.8rem; }
     }
   }
