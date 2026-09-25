@@ -5,7 +5,26 @@ const Experience = () => (
     <h2>EXPERIENCE & TIMELINE</h2>
     <div className="timeline">
       <div className="timeline-item">
-        <div className="timeline-date">Aug 2024 – Present</div>
+        <div className="timeline-date">Nov 2025 – Present</div>
+        <div className="timeline-content">
+          <h3>Software Development Engineer in Test @ BrowserStack</h3>
+          <p>Mumbai, India</p>
+          <ul>
+            <li>Wrote ~970 automated test cases (~505 Playwright, ~470 Nightwatch.js) in Cucumber BDD, with 734 step definitions and 29 page objects, for revenue-critical checkout, pricing, lead-capture and lifecycle-email flows.</li>
+            <li>Closed automation coverage gaps across 11 Growth modules, all merged: Contact Sales / Book-a-Demo form (form → Salesforce lead → RevenueHero booking), Checkout, Pricing Page, Webinars (90% → 100%), Pipe CTA leads (11/12), Abandoned-lead capture, Lifecycle Emailers (48/52), Speedboat touchpoints & intro modals (124/150), Hello Bar (33% → 100%) and Free Product Access.</li>
+            <li>Migrated ~160+ test cases from Nightwatch to Playwright (V3 checkout flows, redirection, V4.2 switch-to-annual across all products, App Live intro modal) with 26 new page objects, and wired the new suites into Jenkins CI.</li>
+            <li>Drove "Regression Under 30 Mins": consolidated 52 feature files into 17 with all 7,976 scenarios preserved, replaced 799 hard waits with polling and cookie-based auth, and fixed 64 failing scenarios from a single regression run.</li>
+            <li>Shipped product code in Ruby on Rails (2 merged PRs): production-guarded test endpoints that made ~14 Sidekiq/cron-only lifecycle emails automatable.</li>
+            <li>Raised 70+ bugs (40 in Jira incl. 3 P0s; 32 via Slack help channels → 24 tickets), including a contact-sales form silently dropping leads, staging traffic creating real production leads, and a paywall downgrade firing after the 5th failed payment instead of the 2nd.</li>
+            <li>QA Owner for 7 P0 and 11 P1 online-sales features: paywall unlock rules, pricing-page experiments, contact-lead drop mitigation, Freshchat corporate-email validation and Test Management pricing updates.</li>
+            <li>Deploy SPOC for 17 production deploy queues: caught and reverted a PR that broke a production build, called a pricing-page rollback, and blocked 5 unready PRs.</li>
+            <li>Owned 189 Jira issues (160 shipped, 356 story points), authored 329 code PRs and reviewed 153; built a nightly regression-failure Slack report and an AI-assisted PR-quality-review tool that flags 10 test anti-patterns.</li>
+            <li>Received 11 Empuls recognitions, including Extra Miler ×4, Round of Applause ×3 and Unsung Warriors ×2.</li>
+          </ul>
+        </div>
+      </div>
+      <div className="timeline-item">
+        <div className="timeline-date">Aug 2024 – Sept 2025</div>
         <div className="timeline-content">
           <h3>Software Engineer Trainee @ Cisco Systems Inc</h3>
           <p>Bengaluru, India</p>
@@ -17,7 +36,7 @@ const Experience = () => (
             <li>Spearheaded testing and certification for full modules, executing automation.</li>
             <li>Developed reusable, high-quality utilities to automate manual tasks.</li>
             <li>Led performance engineering efforts for AppDynamics Controller 25.7 release.</li>
-            <li>Received Connected Recognitions from leadership up to INR 38,000.</li>
+            <li>Received Connected Recognitions from leadership up to INR 48,000.</li>
           </ul>
         </div>
       </div>
