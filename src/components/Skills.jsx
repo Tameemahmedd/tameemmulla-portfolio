@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react';
 
-const skills = [ "JavaScript (Node.js)", "Playwright", "Nightwatch.js", "Cucumber BDD", "Percy", "Ruby on Rails", "React", "Redis", "Sidekiq", "Salesforce", "Claude Code", "Java", "Basic SQL", "Basic Python", "TestNG", "Apache JMeter", "API Testing", "Spring Boot", "Spring Data JPA", "JUnit", "Apache Kafka", "Postman", "Maven", "JIRA", "Git", "GitHub", "Jenkins", "TeamCity", "HTML", "CSS", "MySQL", "Linux", "AWS", "Docker", "Ansible", "Splunk AppDynamics" ];
+const skills = [ "JavaScript (Node.js)", "Playwright", "Nightwatch.js", "Cucumber BDD", "Percy", "Ruby on Rails", "Claude Code", "Java", "Basic SQL", "Basic Python", "TestNG", "Apache JMeter", "API Testing", "Spring Boot", "Spring Data JPA", "JUnit", "Apache Kafka", "Postman", "Maven", "JIRA", "Git", "GitHub", "Jenkins", "TeamCity", "HTML", "CSS", "MySQL", "Linux", "AWS", "Docker", "Ansible", "Splunk AppDynamics" ];
 
 const AUTO_SCROLL_SPEED = 0.5;
 const HOVER_SCROLL_SPEED = 3;
