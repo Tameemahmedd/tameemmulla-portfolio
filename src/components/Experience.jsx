@@ -19,9 +19,9 @@ const Experience = () => (
                 <li>Speedboat touchpoints (<strong>124/150</strong>), Pipe CTA leads (<strong>11/12</strong>), Abandoned leads</li>
               </ul>
             </li>
-            <li>Migrated <strong>~160 tests</strong> from Nightwatch to <strong>Playwright</strong>, running in <strong>Jenkins CI</strong></li>
+            <li>Migrated <strong>~260 tests</strong> from Nightwatch to <strong>Playwright</strong>, running in <strong>Jenkins CI</strong></li>
             <li>Regression cleanup: <strong>52 → 17</strong> feature files, all <strong>7,976 scenarios</strong> kept, <strong>799</strong> hard waits removed</li>
-            <li>Fixed <strong>64 failing scenarios</strong> from a single regression run</li>
+            <li>Fixed <strong>350+ failing test cases</strong>, raising regression stability from <strong>87% to 95%+</strong></li>
             <li>Wrote <strong>Ruby on Rails</strong> test endpoints that made <strong>~14</strong> Sidekiq/cron-only emails testable</li>
             <li>Raised <strong>70+ bugs</strong> (<strong>3 P0</strong>), incl. lost leads and wrong-plan checkout</li>
             <li>QA Owner for <strong>7 P0</strong> and <strong>11 P1</strong> online-sales features (paywall, pricing, Freshchat)</li>
