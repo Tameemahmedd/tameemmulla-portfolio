@@ -1,4 +1,4 @@
 #about {
     .tagline { color: $primary-color; margin-bottom: 1.5rem; }
-    .summary { max-width: 950px; margin: 0 auto; }
+    .summary { max-width: 950px; margin: 0 auto; strong { color: $primary-color; } }
   }
