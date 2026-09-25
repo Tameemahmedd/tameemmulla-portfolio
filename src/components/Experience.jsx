@@ -8,7 +8,7 @@ const Experience = () => (
         <div className="timeline-date">Nov 2025 – Present</div>
         <div className="timeline-content">
           <h3>Software Development Engineer in Test @ BrowserStack</h3>
-          <p>Mumbai, India</p>
+          <p>Mumbai, India · <a className="case-link" href="/browserstack.html" target="_blank" rel="noopener noreferrer">View detailed work →</a></p>
           <ul>
             <li>Wrote ~970 automated test cases (~505 Playwright, ~470 Nightwatch.js) in Cucumber BDD, with 734 step definitions and 29 page objects, for revenue-critical checkout, pricing, lead-capture and lifecycle-email flows.</li>
             <li>Closed automation coverage gaps across 11 Growth modules, all merged: Contact Sales / Book-a-Demo form (form → Salesforce lead → RevenueHero booking), Checkout, Pricing Page, Webinars (90% → 100%), Pipe CTA leads (11/12), Abandoned-lead capture, Lifecycle Emailers (48/52), Speedboat touchpoints & intro modals (124/150), Hello Bar (33% → 100%) and Free Product Access.</li>
@@ -28,7 +28,7 @@ const Experience = () => (
         <div className="timeline-date">Aug 2024 – Sept 2025</div>
         <div className="timeline-content">
           <h3>Software Engineer Trainee @ Cisco Systems Inc</h3>
-          <p>Bengaluru, India</p>
+          <p>Bengaluru, India · <a className="case-link" href="/cisco.html" target="_blank" rel="noopener noreferrer">View detailed work →</a></p>
           <ul>
             <li>Developed 125 tests and refactored 102 legacy tests to achieve 100% pass rate.</li>
             <li>Identified and fixed 66 critical bugs including 21 release blockers within 8 months.</li>

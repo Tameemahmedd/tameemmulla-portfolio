@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tameem at Cisco</title>
+<meta name="description" content="Test automation, framework redesign and release work at Cisco (Splunk AppDynamics), Aug 2024 – Sept 2025.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#F4F5F8; --surface:#FFFFFF; --ink:#161B26; --muted:#5B6376; --line:#DDE1EA;
+  --accent:#2B5BB8; --accent-soft:#E3EAF8;
+  --display:"Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --body:"IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, Menlo, monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#10131A; --surface:#171C26; --ink:#E4E8F0; --muted:#98A1B5; --line:#272E3C;
+    --accent:#7FA6EE; --accent-soft:#1C2740;
+    color-scheme:dark;
+  }
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.55}
+.wrap{max-width:1040px;margin:0 auto;padding-inline:20px;padding-block:32px 64px;display:flex;flex-direction:column;gap:48px}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0}
+h1{font-size:clamp(30px,5vw,46px);line-height:1.08;font-weight:700;letter-spacing:-.01em}
+h2{font-size:22px;font-weight:700}
+h3{font-size:16px;font-weight:600;font-family:var(--body)}
+p{margin:0}
+a{color:var(--accent)}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:3px}
+nav{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:14px}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+header{display:flex;flex-direction:column;gap:14px}
+.trend{font-family:var(--mono);font-size:13px;color:var(--muted)}
+.trend b{color:var(--accent);font-weight:500}
+.lede{max-width:64ch;color:var(--muted);font-size:16px}
+section{display:flex;flex-direction:column;gap:18px}
+.sec-head{display:flex;flex-direction:column;gap:4px}
+.sec-head p{color:var(--muted);max-width:68ch}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.stat{background:var(--surface);padding:18px 18px 16px;display:flex;flex-direction:column;gap:4px}
+.stat .n{font-family:var(--display);font-size:32px;font-weight:700;font-variant-numeric:tabular-nums;line-height:1}
+.stat .l{font-size:13px;color:var(--muted)}
+@media (max-width:760px){.stats{grid-template-columns:repeat(2,1fr)}}
+.meter{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px;display:flex;flex-direction:column;gap:12px}
+.bar-row{display:grid;grid-template-columns:70px 1fr 48px;gap:12px;align-items:center;font-size:13px}
+.bar-row .lab{font-family:var(--mono);color:var(--muted)}
+.bar-row .v{font-family:var(--mono);font-variant-numeric:tabular-nums;text-align:right}
+.track{height:12px;background:var(--line);border-radius:99px;overflow:hidden}
+.fill{height:100%;border-radius:99px}
+.fill.before{background:var(--muted);width:65%}
+.fill.after{background:var(--accent);width:96%}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+@media (max-width:760px){.cols{grid-template-columns:1fr}}
+ul.list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
+ul.list li{display:grid;grid-template-columns:auto 1fr;gap:10px;padding:10px 0;border-bottom:1px solid var(--line);align-items:baseline}
+ul.list li:last-child{border-bottom:none}
+.key{font-family:var(--mono);font-size:12px;color:var(--muted);white-space:nowrap}
+.quotes{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+@media (max-width:760px){.quotes{grid-template-columns:1fr}}
+blockquote{margin:0;padding:18px;background:var(--surface);border:1px solid var(--line);border-radius:10px;display:flex;flex-direction:column;gap:10px}
+blockquote p{font-size:14.5px}
+blockquote cite{font-style:normal;font-size:13px;color:var(--muted)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font-size:13px;padding:5px 11px;border:1px solid var(--line);border-radius:99px;background:var(--surface)}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px;display:flex;flex-direction:column;gap:8px;margin-top:16px}
+footer{font-size:12px;color:var(--muted);font-family:var(--mono)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav><a href="/">← Portfolio</a><a href="/browserstack.html">Current role: BrowserStack →</a></nav>
+
+  <header>
+    <span class="eyebrow">Software Engineer Trainee · Splunk AppDynamics, Cisco · Bengaluru · Aug 2024 – Sept 2025</span>
+    <h1>Mohammed Tameem Ahmed Mulla at Cisco</h1>
+    <p class="trend">test pass rate <b>65% → 96%</b> · release blockers caught <b>21</b></p>
+    <p class="lede">About 13 months on the AppDynamics Controller team. I owned test automation and certification for full modules, redesigned the test framework, and led performance testing for the 25.7 release.</p>
+  </header>
+
+  <section aria-labelledby="s-overview">
+    <div class="sec-head"><h2 id="s-overview">Overview</h2></div>
+    <div class="stats">
+      <div class="stat"><span class="n">125</span><span class="l">new automated tests written</span></div>
+      <div class="stat"><span class="n">102</span><span class="l">legacy tests refactored to a 100% pass rate</span></div>
+      <div class="stat"><span class="n">66</span><span class="l">critical bugs found and fixed in 8 months</span></div>
+      <div class="stat"><span class="n">21</span><span class="l">of those were release blockers</span></div>
+      <div class="stat"><span class="n">+25%</span><span class="l">test coverage</span></div>
+      <div class="stat"><span class="n">96%</span><span class="l">test pass rate, up from 65%</span></div>
+      <div class="stat"><span class="n">25.7</span><span class="l">Controller release I led performance testing for</span></div>
+      <div class="stat"><span class="n">₹48,000</span><span class="l">in Connected Recognitions from leadership</span></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="s-framework">
+    <div class="sec-head">
+      <h2 id="s-framework">Framework redesign</h2>
+      <p>Only 65% of tests were passing. I rebuilt the framework with clean-code practices and refactored the legacy tests so the results could be trusted.</p>
+    </div>
+    <div class="meter" role="img" aria-label="Test pass rate rose from 65 percent before the redesign to 96 percent after">
+      <div class="bar-row"><span class="lab">Before</span><div class="track"><div class="fill before"></div></div><span class="v">65%</span></div>
+      <div class="bar-row"><span class="lab">After</span><div class="track"><div class="fill after"></div></div><span class="v">96%</span></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="s-work">
+    <div class="sec-head"><h2 id="s-work">What I worked on</h2></div>
+    <div class="cols">
+      <div>
+        <h3>Testing and releases</h3>
+        <ul class="list">
+          <li><span class="key">CERT</span><span>Owned testing and certification for full modules, with automation run end to end.</span></li>
+          <li><span class="key">PERF</span><span>Led performance engineering for the AppDynamics Controller 25.7 release and escalated a critical release blocker.</span></li>
+          <li><span class="key">RELEASE</span><span>Handled release activities for Alerting CSaaS and quick-fix releases.</span></li>
+          <li><span class="key">MIGRATE</span><span>Migrated UI tests off TestIM and cleared the Alerting test backlog.</span></li>
+          <li><span class="key">CI</span><span>Stabilised the pipeline so dev requests got consistent results.</span></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Tools I built</h3>
+        <ul class="list">
+          <li><span class="key">ALERTS</span><span>Alerting Tool: generates, monitors and reports AppDynamics health rules across performance-testing stages.</span></li>
+          <li><span class="key">UTILS</span><span>Reusable utilities that replaced repetitive manual tasks.</span></li>
+        </ul>
+        <div class="card">
+          <h3>Certifications earned at Cisco</h3>
+          <span>Cisco Certified DevNet Associate (2025)</span>
+          <span>Cisco Certified Network Associate, CCNA (2025)</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="s-voice">
+    <div class="sec-head"><h2 id="s-voice">What teammates said</h2></div>
+    <div class="quotes">
+      <blockquote><p>"Working with Tameem has been a fantastic experience. He is extremely proactive and result driven individual and always exceeded my expectations."</p><cite>Biswajit Raut, Leader, Software Engineering</cite></blockquote>
+      <blockquote><p>"You have done an outstanding job ramping up quickly, delivering results flawlessly... This effort has contributed significantly to the overall quality and efficiency of our processes, ensuring smooth and effective releases."</p><cite>Araveti Obul Reddy, Leader, Software Engineering</cite></blockquote>
+      <blockquote><p>"You have reduced the backlog items of the Alerting Tests and Migration of UI tests from TestIM. It's really good that you are able to handle all the dev requests and Stabilising the pipeline with consistent results."</p><cite>Kishore Kumar, Tech Lead</cite></blockquote>
+      <blockquote><p>"You are a patient person, willing to help and committed to success - even if that required answering questions outside your working hours. That is a real team spirit, aiming for success!"</p><cite>Aleksander Olkuski, Tech Lead</cite></blockquote>
+      <blockquote><p>"He is a quick learner who adapts to new challenges very effectively... His positive attitude, problem-solving mindset, and willingness to take ownership made him a valuable team member."</p><cite>Abhijeet Waghmare, Senior SDET</cite></blockquote>
+    </div>
+  </section>
+
+  <section aria-labelledby="s-stack">
+    <div class="sec-head"><h2 id="s-stack">Tools and stack</h2></div>
+    <div class="chips">
+      <span class="chip">Java</span><span class="chip">TestNG</span><span class="chip">Apache JMeter</span><span class="chip">API testing</span><span class="chip">TeamCity</span><span class="chip">Jenkins</span><span class="chip">Docker</span><span class="chip">Linux</span><span class="chip">AWS</span><span class="chip">Splunk AppDynamics</span>
+    </div>
+  </section>
+
+  <footer>Updated September 2026</footer>
+</div>
+</body>
+</html>
