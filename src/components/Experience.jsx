@@ -24,7 +24,7 @@ const Experience = () => (
             <li>Fixed <strong>350+ failing test cases</strong>, raising regression stability from <strong>87% to 95%+</strong></li>
             <li>Wrote <strong>Ruby on Rails</strong> test endpoints that made <strong>~14</strong> Sidekiq/cron-only emails testable</li>
             <li>Raised <strong>70+ bugs</strong> (<strong>3 P0</strong>), incl. lost leads and wrong-plan checkout</li>
-            <li>QA Owner for <strong>7 P0</strong> and <strong>11 P1</strong> online-sales features (paywall, pricing, Freshchat)</li>
+            <li>QA on <strong>18 P0</strong>, <strong>31 P1</strong> and <strong>119 P2</strong> online-sales features (paywall, pricing, checkout, leads)</li>
             <li>Deploy SPOC for <strong>17 production deploys</strong>, incl. a build-break revert and a rollback</li>
             <li>Daily AI workflow: <strong>Claude Code</strong> skills for PR review and regression triage, <strong>MCP</strong> to classify <strong>150+ test cases</strong></li>
             <li><strong>189 Jira issues</strong> (160 shipped), <strong>329 PRs</strong>, <strong>153 reviews</strong></li>
