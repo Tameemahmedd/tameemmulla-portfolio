@@ -18,7 +18,8 @@ const Experience = () => (
             <li>Raised 70+ bugs (40 in Jira incl. 3 P0s; 32 via Slack help channels → 24 tickets), including a contact-sales form silently dropping leads, staging traffic creating real production leads, and a paywall downgrade firing after the 5th failed payment instead of the 2nd.</li>
             <li>QA Owner for 7 P0 and 11 P1 online-sales features: paywall unlock rules, pricing-page experiments, contact-lead drop mitigation, Freshchat corporate-email validation and Test Management pricing updates.</li>
             <li>Deploy SPOC for 17 production deploy queues: caught and reverted a PR that broke a production build, called a pricing-page rollback, and blocked 5 unready PRs.</li>
-            <li>Owned 189 Jira issues (160 shipped, 356 story points), authored 329 code PRs and reviewed 153; built a nightly regression-failure Slack report and an AI-assisted PR-quality-review tool that flags 10 test anti-patterns.</li>
+            <li>Owned 189 Jira issues (160 shipped, 356 story points), authored 329 code PRs and reviewed 153.</li>
+            <li>Use AI (Claude Code, Copilot, Cursor) daily: built Claude Code skills for PR-quality review (flags 10 test anti-patterns, contributed to the team's AI harness) and nightly regression triage (failures grouped by stack trace → Slack), and used MCP integrations with Jira, Slack, GitHub and BrowserStack Test Management to run gap analysis and classify 150+ test cases in bulk.</li>
             <li>Received 11 Empuls recognitions, including Extra Miler ×4, Round of Applause ×3 and Unsung Warriors ×2.</li>
           </ul>
         </div>

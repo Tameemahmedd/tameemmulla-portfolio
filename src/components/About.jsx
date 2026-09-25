@@ -5,7 +5,7 @@ const About = () => (
     <h2>ABOUT ME</h2>
     <p className="tagline">CODE. EAT. SLEEP. REPEAT.</p>
     <p className="summary">
-      Software Development Engineer in Test with 2+ years of experience automating and certifying revenue-critical, full-stack products. At BrowserStack I build Playwright and Nightwatch.js automation for checkout, pricing, contact-sales and lead-capture flows, drive the Nightwatch → Playwright migration, and trace bugs to the root cause in Rails and React code. At Cisco (Splunk AppDynamics), I redesigned a test framework that raised the pass rate from 65% to 96%.
+      Software Development Engineer in Test with 2+ years of experience automating and certifying revenue-critical, full-stack products. At BrowserStack I build Playwright and Nightwatch.js automation for checkout, pricing, contact-sales and lead-capture flows, drive the Nightwatch → Playwright migration, and trace bugs to the root cause in Rails and React code. I use AI agents (Claude Code with custom skills and MCP integrations) every day to write, review and triage tests faster. At Cisco (Splunk AppDynamics), I redesigned a test framework that raised the pass rate from 65% to 96%.
     </p>
   </section>
 );
